@@ -2,7 +2,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                dir
+                echo "Hi Om"
             }
         }
     }
