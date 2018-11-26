@@ -1,9 +1,11 @@
-pipeline {
-    stages {
-        stage('build') {
-            steps {
-                echo "Hi Om"
-            }
-        }
+node {  
+    stage('Build') { 
+        dir 
+    }
+    stage('Test') { 
+        echo "Testing Done" 
+    }
+    stage('Deploy') { 
+        echo "Deployed"
     }
 }
