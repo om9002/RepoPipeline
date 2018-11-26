@@ -1,11 +1,18 @@
 node {  
     stage('Build') { 
-        dir 
+        steps { 
+                sh 'make' 
+            } 
     }
     stage('Test') { 
-        echo "Testing Done" 
+        steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            } 
     }
     stage('Deploy') { 
-        echo "Deployed"
+        steps {
+                sh 'make publish'
+            }
     }
 }
