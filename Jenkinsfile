@@ -3,6 +3,6 @@ node {
         echo "make" 
     }
     stage('Test') { 
-        echo "Hello World"
+        echo "Hello Om"
     }
 }
