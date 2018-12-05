@@ -1,9 +1,6 @@
 node {  
-    checkout scm
     stage('Build') { 
-        echo "make" 
-    }
-    stage('Test') { 
-        echo "Hello Om"
+        bat 'make'
+ 	archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
     }
 }
