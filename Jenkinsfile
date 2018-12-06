@@ -1,6 +1,7 @@
 node {  
     stage('Build') { 
-        bat 'make'
- 	archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+        def username = 'Jenkins'
+	echo 'Hello Mr. ${username}'
+	echo "I said, Hello Mr. ${username}"
     }
 }
