@@ -1,7 +1,3 @@
 node {  
-    stage('Build') { 
-        def username = 'Jenkins'
-	echo 'Hello Mr. ${username}'
-	echo "I said, Hello Mr. ${username}"
-    }
+    echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 }
