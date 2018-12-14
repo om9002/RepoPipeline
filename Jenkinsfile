@@ -4,7 +4,7 @@ node {
             sh 'make check'
         }
         finally {
-            junit 'D:\TestResults\*.xml'
+            junit 'D:/TestResults/*.xml'
         }
     }
 }
