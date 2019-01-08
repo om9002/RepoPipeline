@@ -1,10 +1,6 @@
 node {
     stage('Test') {
-        try {
-            sh 'make check'
-        }
-        finally {
-            junit '**/target/*.xml'
-        }
+        @Library('my-shared-library') _    
+	echo 'make check'
     }
 }
